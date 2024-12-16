@@ -30,6 +30,12 @@ https://github.com/user-attachments/assets/137df6bd-5a7f-4af6-9c2d-347d66299bda
 ## File Structure
 - `project.dig`: The top-level circuit design.
 - `encoder`: Verilog HDL code for the encoder block inside of project.dig file.
+- `shifter.dig`: Circuit design for the shifter block.
+- `shifter_pwd.dig`: Circuit design for the password shifter block.
+- `timer.dig`: Circuit design for the timer block.
+- `mode_selector.dig`: Circuit design for the mode selector block.
+- `password.hex`: Hex file containing user passwords.
+
 ## Encoder Module
 
 ```verilog
@@ -80,9 +86,26 @@ module encoder(
     end      
 endmodule
 ```
-- `shifter.dig`: Circuit design for the shifter block.
-- `shifter_pwd.dig`: Circuit design for the password shifter block.
-- `timer.dig`: Circuit design for the timer block.
-- `mode_selector.dig`: Circuit design for the mode selector block.
-- `password.hex`: Hex file containing user passwords.
+
+## Shifter Module
+![shifter](https://github.com/user-attachments/assets/32d1e98e-f77e-490f-a8ec-678215df4130)
+
+## Shifter Passwords Module
+![shifter_pwd](https://github.com/user-attachments/assets/6cb3f4c1-601e-432a-b6b5-f0aacf3fea76)
+
+## Timer Module
+![timer](https://github.com/user-attachments/assets/6398d340-4610-4be1-84c4-c05fd24d7559)
+
+## Mode Selector Module
+![mode_selector](https://github.com/user-attachments/assets/9a122461-7108-4006-9422-e0f3db1e76d9)
+
+## Password Hex Structure
+- Each line after v2.0 raw are passwords. They are stored as 16-bit BCD numbers.
+  v2.0 raw
+  1234
+  5678
+  ffff
+  ffff
+  ffff
+..........
 
